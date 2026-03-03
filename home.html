@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <link href="fonts/Typefesse/Typefesse_Claire-Obscure.otf" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styling.css">
+    <title>Who Wants a Milli</title>
+</head>
+<body>
+    <header>Header</header>
+    <nav>Navigation</nav>
+    <main>
+        Main content <br>
+        <h1 class="game_title">Who <br>Wants <br>A Milli <br>... </h1>
+        <button data-modal-target="#game_difficulty" id="play_button">
+            Play
+        </button>
+            <div class="game_difficulty" id="game_difficulty">
+
+                <div class="game_difficulty-header">
+                    <div class="select_title">Select a difficulty</div>
+                    <button class="close_button" data-close-button >&times;</button>
+                </div>
+                
+                <div class="game_difficulty-body">
+                    <label class="mode_choice" for="easy_mode_radio" id="easy_mode">
+                        <label for="easy_mode_radio" class="custom_radio_button">
+                            <input type="radio" id="easy_mode_radio" name="game_mode" value="easy">
+                            <span class="checkmark"></span>
+                        </label>
+                        <h2>Bitch?</h2>
+                    </label>
+                    <label class="mode_choice" for="hard_mode_radio" id="hard_mode">
+                        <label for="hard_mode_radio" class="custom_radio_button">
+                            <input type="radio" id="hard_mode_radio" name="game_mode" value="hard" checked>
+                            <span class="checkmark"></span>
+                        </label>
+                        <h2>Boss</h2>
+                    </label>
+                    <button type="button" id="get_questions">
+                        let's play
+                    </button>
+                </div>
+               
+            </div>
+            <div id="overlay"></div>
+        <div class="joke_ads">
+            This is an Ad
+        </div>
+    </main>
+    <footer class="footer_float">
+        <P>this is some randome text placeholder. copyright since 2026</P>
+    </footer>
+    <script src="./scripts/script.js"></script>
+</body>
+</html>

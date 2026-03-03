@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+    <link href="fonts/Typefesse/Typefesse_Claire-Obscure.otf" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styling.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="page_header"><h4>Who wants a Milli ...</h4></header>
+    <main>
+        <div id="time_and_exit">
+            <div id="timer">00:00</div>
+            <label id="walk_away_container"> Walk away<button id="accept_defeat" data-modal-target="#game_difficulty">$0,000,000.00</button></label>
+            <div class="game_difficulty" id="game_difficulty">
+                <div>
+                    <button class="close_button" data-close-button >&times;</button>
+                    <p>Are you sure</br>
+                    you want end the game here</br>
+                    with $000,000.00</p>
+                </div>
+                <div>
+                    <button></button>
+                    <button></button>
+                </div>
+            </div>
+        </div>
+        <div id="asked_question">
+            <div id="amount_display"> $25,000</div>
+            <div id="question_display">
+                <!-- Lorem, ipsum dolor sit amet consectetur adipisicing elit. <br> 
+                Obcaecati at porro magni ab. Minima, esse. <br>
+                Distinctio maxime molestiae dolor obcaecati animi accusamus architecto, <br>
+                officiis voluptates fuga ducimus assumenda! Exercitationem, iusto. <br> -->
+            </div>
+        </div>
+        <div id="question_options">
+            <label for="option_a" class="option_container">
+                <input type="radio" name="options" id="option_a" class="option_" checked="checked">
+                <p id="option_0">a. options 1</p></label>
+            
+            <label for="option_b" class="option_container">
+                <input type="radio" name="options" id="option_b" class="option_">
+                <p id="option_1">b. options 2</p></label>
+            
+            <label for="option_c" class="option_container">
+                <input type="radio" name="options" id="option_c" class="option_">
+                <p id="option_2">c. options 3</p></label>
+            
+            <label for="option_d" class="option_container">
+                <input type="radio" name="options" id="option_d" class="option_">
+                <p id="option_3">d. options 4</p></label>
+        </div>
+        <div id="game_life_lines">
+            <button class="life_line_button" id="fifty_fifty">
+                <img src="./images/row-vertical.svg" alt="50/50 options">
+            </button>
+            <button class="life_line_button" id="phone_friend">
+                <img src="./images/call-calling.svg" alt="50/50 options">
+            </button>
+            <button class="life_line_button" id="ask_audience">
+                <img src="./images/people.svg" alt="50/50 options">
+            </button>
+        </div>
+        <div id="overlay"></div>
+        <div class="joke_ads">
+            This is an Ad
+        </div>
+    </main>
+    <footer class="footer_float">
+        <P>this is some randome text placeholder. copyright since 2026</P>
+    </footer>
+    <script src="./scripts/script.js"></script>
+</body>
+</html>
