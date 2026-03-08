@@ -16,7 +16,9 @@
     <main>
         <div id="time_and_exit">
             <div id="timer">00:00</div>
-            <label id="walk_away_container"> Walk away<button id="accept_defeat" data-modal-target="#game_difficulty">$0,000,000.00</button></label>
+            <label id="walk_away_container"> Walk away
+                <button id="accept_defeat" data-modal-target="#game_difficulty">$0,000,000.00</button>
+            </label>
             <div class="game_difficulty" id="game_difficulty">
                 <div>
                     <button class="close_button" data-close-button >&times;</button>
@@ -41,20 +43,37 @@
         </div>
         <div id="question_options">
             <label for="option_a" class="option_container">
-                <input type="radio" name="options" id="option_a" class="option_" checked="checked">
+                <input type="radio" name="options" id="option_a" class="option_" value="0">
                 <p id="option_0">a. options 1</p></label>
             
             <label for="option_b" class="option_container">
-                <input type="radio" name="options" id="option_b" class="option_">
+                <input type="radio" name="options" id="option_b" class="option_" value="1">
                 <p id="option_1">b. options 2</p></label>
             
             <label for="option_c" class="option_container">
-                <input type="radio" name="options" id="option_c" class="option_">
+                <input type="radio" name="options" id="option_c" class="option_" value="2">
                 <p id="option_2">c. options 3</p></label>
             
             <label for="option_d" class="option_container">
-                <input type="radio" name="options" id="option_d" class="option_">
+                <input type="radio" name="options" id="option_d" class="option_" value="3">
                 <p id="option_3">d. options 4</p></label>
+            <button id="final_answer">
+                Final Answer?
+            </button>
+            <div class="pop_up" id="nq_popup">
+                <div class="overlay"></div>
+                <div class="popup-content">
+                    <div class="correct">
+                        <img src="./images/right_sign.svg" alt="correct checkmark">
+                        <h2>Ka-ching !!</h2>
+                    </div>
+                    <p>You have won<br> <b>$25,000</b></p>
+                    <div class="next_action">
+                        <button class="basic_button" id="continue_button">continue</button>
+                        <button id="cowards_out"> away with my money </button>
+                    </div>
+                </div>
+            </div>
         </div>
         <div id="game_life_lines">
             <button class="life_line_button" id="fifty_fifty">
@@ -67,7 +86,7 @@
                 <img src="./images/people.svg" alt="50/50 options">
             </button>
         </div>
-        <div id="overlay"></div>
+
         <div class="joke_ads">
             This is an Ad
         </div>
@@ -76,5 +95,6 @@
         <P>this is some randome text placeholder. copyright since 2026</P>
     </footer>
     <script src="./scripts/script.js"></script>
+    <script src="./scripts/gameLogic.js"></script>
 </body>
 </html>

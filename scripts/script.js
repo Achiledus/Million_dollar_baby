@@ -4,17 +4,25 @@ const overlay = document.getElementById("overlay");
 
 
 
-const easyQuestions = [{
-    "question": "what is the name of an overly hopefull man?",
-    "options" : ["a. A Fool","b. Batman", "c. Constantinopole", "d. The infinity Stone"],
-    "answer" : 0 
+const typeQuestions = {easy : [{
+        "index": 1,
+        "question": "what is the name of an overly hopefull man?",
+        "options" : ["a. A Fool","b. Batman", "c. Constantinopole", "d. The infinity Stone"],
+        "answer" : 0 
     },
     {
-    "question": "how wood would a woodchuck chuck if a woodchuck could chuck wood?",
-    "options" : ["a. 30lbs","b. 80kilos", "c. an unreasonable amount", "d. depends on the size of wood"],
-    "answer" : 2 
+        "index": 2,
+        "question": "how wood would a woodchuck chuck if a woodchuck could chuck wood?",
+        "options" : ["a. 30lbs","b. 80kilos", "c. an unreasonable amount", "d. depends on the size of wood"],
+        "answer" : 2 
 
-}];
+    }],
+    hard: [{
+        "index": 1,
+        "question": `in the novel "1984" what country is the party at war with?`,
+        "options" : ["a. Eurasian","b. East-Asian, as it has always been", "c. Itself", "d. Whichever the party decides"],
+        "answer" : 1 
+}]};
 
 playBtn.forEach(button => {
     console.log("check 2");
@@ -53,20 +61,22 @@ function closeOptions(game_difficulty){
 
 
 const startGame = document.getElementById("get_questions");
-
-startGame.addEventListener('click', ()=>{
-    const displayedQuestion = document.getElementById("question_display");
-    selectDifficulty(displayedQuestion, easyQuestions);
+startGame.addEventListener('click', () => {
+    const difficulty = selectDifficulty();
+    const questionsForDifficulty = typeQuestions[difficulty];
+    if (difficulty) {
+        localStorage.setItem('gameDifficulty', difficulty);
+        localStorage.setItem(
+                            'currentQuestion',
+                            JSON.stringify(questionsForDifficulty[0]));
+        window.location.href = "gamePage.html"; 
+    }
 });
-function selectDifficulty(textBox, textToDisplay){
-    const selectedRadio = document.querySelector('input[name="game_mode"]:checked');
 
+function selectDifficulty() {
+    const selectedRadio = document.querySelector('input[name="game_mode"]:checked');
     if (selectedRadio) {
-        const result = selectedRadio.value;
-        console.log("Selected value:", result);
-        window.location.href = "gamePage.html";
-        textBox.innerHTML = textToDisplay[0].question
-        return result;
+        return selectedRadio.value; 
     } else {
         console.log("No radio button selected.");
         return null;

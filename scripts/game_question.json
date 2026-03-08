@@ -1,0 +1,10 @@
+{"easy" : [{
+    "question": "what is the name of an overly hopefull man?",
+    "options" : ["a. A Fool","b. Batman", "c. Constantinopole", "d. The infinity Stone"],
+    "answer" : 0 
+    },
+    {
+    "question": "how wood would a woodchuck chuck if a woodchuck could chuck wood?",
+    "options" : ["a. 30lbs","b. 80kilos", "c. an unreasonable amount", "d. depends on the size of wood"],
+    "answer" : 2 
+}]}
