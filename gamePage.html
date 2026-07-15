@@ -9,29 +9,34 @@
     <link href="fonts/Typefesse/Typefesse_Claire-Obscure.otf" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styling.css">
-    <title>Document</title>
+    <title>Questions</title>
 </head>
 <body>
-    <header class="page_header"><h4>Who wants a Milli ...</h4></header>
+    <header class="page_header"><h4 id="home_click">Who wants a Milli ...</h4></header>
     <main>
-        <div id="time_and_exit">
-            <div id="timer">00:00</div>
-            <label id="walk_away_container"> Walk away
-                <button id="accept_defeat" data-modal-target="#game_difficulty">$0,000,000.00</button>
-            </label>
-            <div class="game_difficulty" id="game_difficulty">
-                <div>
-                    <button class="close_button" data-close-button >&times;</button>
-                    <p>Are you sure</br>
-                    you want end the game here</br>
-                    with $000,000.00</p>
+        <div id="paused_overlay"></div>
+        <div class="just_for_alignment">
+            <div id="time_and_exit">
+                <button id="timer">00:00</button>
+                <div id="walk_away_container"> 
+                    <span>Walk away</span>
+                    <button id="accept_defeat" >$000</button>
                 </div>
-                <div>
-                    <button></button>
-                    <button></button>
+                <div class="pop_up_walkaway" id="surrender">
+                    <div class="overlay" id="surrender_overlay"></div>
+                    <div id="walkaway_text_container">
+                        <p>Are you sure</br>
+                            you want end the game here</br>
+                            with <span id="cash_back">$000,000.00</span></p>
+                        <div id="surrender_buttons_container">
+                            <button class="surrender_buttons" id="bitch_out">Yeh, I'm sorry</button>
+                            <button class="surrender_buttons" id="fat_finger">Nah, fat fingers</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+       
         <div id="asked_question">
             <div id="amount_display"> $25,000</div>
             <div id="question_display">
@@ -41,40 +46,64 @@
                 officiis voluptates fuga ducimus assumenda! Exercitationem, iusto. <br> -->
             </div>
         </div>
+
         <div id="question_options">
-            <label for="option_a" class="option_container">
+           <label for="option_a" class="option_container" id="container_0">
                 <input type="radio" name="options" id="option_a" class="option_" value="0">
-                <p id="option_0">a. options 1</p></label>
-            
-            <label for="option_b" class="option_container">
+                <div class="audience_voted" style="--width: 10" id="audience_0"></div>
+                <p id="option_text_0">a. options 1</p>
+            </label>
+
+            <label for="option_b" class="option_container" id="container_1">
                 <input type="radio" name="options" id="option_b" class="option_" value="1">
-                <p id="option_1">b. options 2</p></label>
-            
-            <label for="option_c" class="option_container">
+                <div class="audience_voted" style="--width: 10" id="audience_1"></div>
+                <p id="option_text_1">b. options 2</p>
+            </label>
+
+            <label for="option_c" class="option_container" id="container_2">
                 <input type="radio" name="options" id="option_c" class="option_" value="2">
-                <p id="option_2">c. options 3</p></label>
-            
-            <label for="option_d" class="option_container">
+                <div class="audience_voted" style="--width: 10" id="audience_2"></div>
+                <p id="option_text_2">c. options 3</p>
+            </label>
+
+            <label for="option_d" class="option_container" id="container_3">
                 <input type="radio" name="options" id="option_d" class="option_" value="3">
-                <p id="option_3">d. options 4</p></label>
+                <div class="audience_voted" style="--width: 10" id="audience_3"></div>
+                <p id="option_text_3">d. options 4</p>
+            </label>
             <button id="final_answer">
                 Final Answer?
             </button>
+
+            
             <div class="pop_up" id="nq_popup">
                 <div class="overlay"></div>
-                <div class="popup-content">
+                <div class="popup-content" id = "correct_popup">
                     <div class="correct">
                         <img src="./images/right_sign.svg" alt="correct checkmark">
                         <h2>Ka-ching !!</h2>
                     </div>
-                    <p>You have won<br> <b>$25,000</b></p>
+                    <p>You have won<br> <b class="just_won">$25,000</b></p>
                     <div class="next_action">
                         <button class="basic_button" id="continue_button">continue</button>
                         <button id="cowards_out"> away with my money </button>
                     </div>
                 </div>
+                <div class="popup-content" id = "wrong_popup">
+                    <div class="correct">
+                        <img src="./images/wron_sign.svg" alt="wrong checkmark">
+                        <h2>You're Broke and Dumb!</h2>
+                    </div>
+                    <p>You lose all of your<br> <b class="just_won">$25,000</b></p>
+                    <div class="next_action">
+                        <button class="basic_button" id="try_again_button">Try again</button>
+                        <button id ="give_up_button"> Go Home </button>
+                    </div>
+                </div>
             </div>
         </div>
+
+
         <div id="game_life_lines">
             <button class="life_line_button" id="fifty_fifty">
                 <img src="./images/row-vertical.svg" alt="50/50 options">
@@ -82,6 +111,18 @@
             <button class="life_line_button" id="phone_friend">
                 <img src="./images/call-calling.svg" alt="50/50 options">
             </button>
+
+            <div id="phone_friend_response">
+                <div class="overlay"></div>
+                <div id="friend_choice">
+                    <p id="friend_message">{message}</p>
+                    <div class="button_holder">
+                        <button class="surrender_buttons" id="accept"> I trust it</button>
+                        <button class="surrender_buttons" id="think_for_self">Nah, can't be</button>
+                    </div>
+                </div>
+            </div>
+
             <button class="life_line_button" id="ask_audience">
                 <img src="./images/people.svg" alt="50/50 options">
             </button>

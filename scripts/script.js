@@ -4,25 +4,26 @@ const overlay = document.getElementById("overlay");
 
 
 
-const typeQuestions = {easy : [{
-        "index": 1,
-        "question": "what is the name of an overly hopefull man?",
-        "options" : ["a. A Fool","b. Batman", "c. Constantinopole", "d. The infinity Stone"],
-        "answer" : 0 
-    },
-    {
-        "index": 2,
-        "question": "how wood would a woodchuck chuck if a woodchuck could chuck wood?",
-        "options" : ["a. 30lbs","b. 80kilos", "c. an unreasonable amount", "d. depends on the size of wood"],
-        "answer" : 2 
+const typeQuestions = {};
+async function loadQuestions() {
+    try {
+        const response = await fetch("./scripts/game_question.json");
 
-    }],
-    hard: [{
-        "index": 1,
-        "question": `in the novel "1984" what country is the party at war with?`,
-        "options" : ["a. Eurasian","b. East-Asian, as it has always been", "c. Itself", "d. Whichever the party decides"],
-        "answer" : 1 
-}]};
+        if (!response.ok) {
+            throw new Error("Failed to load questions.json");
+        }
+
+        allQuestions = await response.json();
+        console.log("Questions loaded:", allQuestions);
+
+    } catch (error) {
+        console.error("Error loading questions:", error);
+    }
+}
+
+window.addEventListener("load", async () => {
+    await loadQuestions();
+});
 
 playBtn.forEach(button => {
     console.log("check 2");
@@ -61,16 +62,17 @@ function closeOptions(game_difficulty){
 
 
 const startGame = document.getElementById("get_questions");
+
 startGame.addEventListener('click', () => {
     const difficulty = selectDifficulty();
-    const questionsForDifficulty = typeQuestions[difficulty];
-    if (difficulty) {
-        localStorage.setItem('gameDifficulty', difficulty);
-        localStorage.setItem(
-                            'currentQuestion',
-                            JSON.stringify(questionsForDifficulty[0]));
-        window.location.href = "gamePage.html"; 
-    }
+    if (!difficulty) return;
+    const questionsForDifficulty = allQuestions[difficulty];
+
+    localStorage.setItem('gameDifficulty', difficulty);
+    localStorage.setItem('questions', JSON.stringify(questionsForDifficulty));
+    localStorage.setItem('currentQuestionIndex', '0');
+    localStorage.setItem("safeAmount", "0");
+    window.location.href = "gamePage.html"; 
 });
 
 function selectDifficulty() {
@@ -82,3 +84,4 @@ function selectDifficulty() {
         return null;
     }
 };
+

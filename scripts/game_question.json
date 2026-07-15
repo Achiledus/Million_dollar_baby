@@ -1,10 +1,156 @@
-{"easy" : [{
-    "question": "what is the name of an overly hopefull man?",
-    "options" : ["a. A Fool","b. Batman", "c. Constantinopole", "d. The infinity Stone"],
-    "answer" : 0 
+{
+  "easy": [
+    {
+      "question": "What color do you get when you mix red and blue?",
+      "options": ["Green", "Purple", "Orange", "Brown"],
+      "answer": 1
     },
     {
-    "question": "how wood would a woodchuck chuck if a woodchuck could chuck wood?",
-    "options" : ["a. 30lbs","b. 80kilos", "c. an unreasonable amount", "d. depends on the size of wood"],
-    "answer" : 2 
-}]}
+      "question": "How many days are there in a week?",
+      "options": ["5", "6", "7", "8"],
+      "answer": 2
+    },
+    {
+      "question": "Which animal is known for barking?",
+      "options": ["Cat", "Dog", "Cow", "Fish"],
+      "answer": 1
+    },
+    {
+      "question": "What do bees make?",
+      "options": ["Milk", "Honey", "Bread", "Wax paper"],
+      "answer": 1
+    },
+    {
+      "question": "Which planet do humans live on?",
+      "options": ["Mars", "Venus", "Earth", "Jupiter"],
+      "answer": 2
+    },
+    {
+      "question": "How many wheels does a bicycle usually have?",
+      "options": ["1", "2", "3", "4"],
+      "answer": 1
+    },
+    {
+      "question": "What is frozen water called?",
+      "options": ["Steam", "Rain", "Ice", "Snow"],
+      "answer": 2
+    },
+    {
+      "question": "Which meal do people usually eat in the morning?",
+      "options": ["Dinner", "Lunch", "Breakfast", "Dessert"],
+      "answer": 2
+    },
+    {
+      "question": "What do you use to write on a blackboard?",
+      "options": ["Soap", "Chalk", "Glue", "Thread"],
+      "answer": 1
+    },
+    {
+      "question": "How many legs does a spider have?",
+      "options": ["6", "8", "10", "12"],
+      "answer": 1
+    },
+    {
+      "question": "What is the chemical symbol for gold?",
+      "options": ["Ag", "Gd", "Au", "Go"],
+      "answer": 2
+    },
+    {
+      "question": "Who developed the theory of general relativity?",
+      "options": ["Isaac Newton", "Albert Einstein", "Galileo Galilei", "Niels Bohr"],
+      "answer": 1
+    },
+    {
+      "question": "Which Shakespeare play features the characters Rosencrantz and Guildenstern?",
+      "options": ["Macbeth", "Othello", "Hamlet", "King Lear"],
+      "answer": 2
+    },
+    {
+      "question": "What is the square root of 144?",
+      "options": ["11", "12", "13", "14"],
+      "answer": 1
+    },
+    {
+      "question": "Which ocean is the largest on Earth?",
+      "options": ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Pacific Ocean"],
+      "answer": 3
+    }
+  ],
+  "hard": [
+    {
+      "question": "In George Orwell's novel 1984, what is the name of the totalitarian ruling party?",
+      "options": ["The State", "The Party", "Big Brother", "The Inner Circle"],
+      "answer": 1
+    },
+    {
+      "question": "Which gas makes up most of Earth's atmosphere?",
+      "options": ["Oxygen", "Carbon dioxide", "Nitrogen", "Hydrogen"],
+      "answer": 2
+    },
+    {
+      "question": "Who wrote the epic poem Paradise Lost?",
+      "options": ["William Shakespeare", "John Milton", "Geoffrey Chaucer", "Alexander Pope"],
+      "answer": 1
+    },
+    {
+      "question": "What is the capital city of Australia?",
+      "options": ["Sydney", "Melbourne", "Canberra", "Perth"],
+      "answer": 2
+    },
+    {
+      "question": "Which blood type is known as the universal donor?",
+      "options": ["AB+", "O-", "A+", "B-"],
+      "answer": 1
+    },
+    {
+      "question": "What is the smallest prime number?",
+      "options": ["0", "1", "2", "3"],
+      "answer": 2
+    },
+    {
+      "question": "In computing, what does HTML stand for?",
+      "options": ["Hyper Trainer Marking Language", "HyperText Markup Language", "HighText Machine Language", "Hyper Transfer Markdown Language"],
+      "answer": 1
+    },
+    {
+      "question": "Which artist painted The Persistence of Memory?",
+      "options": ["Pablo Picasso", "Vincent van Gogh", "Claude Monet", "Salvador Dali"],
+      "answer": 3
+    },
+    {
+      "question": "Which organ in the human body is primarily responsible for filtering blood?",
+      "options": ["Heart", "Liver", "Kidneys", "Lungs"],
+      "answer": 2
+    },
+    {
+      "question": "What is the chemical symbol for gold?",
+      "options": ["Ag", "Gd", "Au", "Go"],
+      "answer": 2
+    },
+    {
+      "question": "Who developed the theory of general relativity?",
+      "options": ["Isaac Newton", "Albert Einstein", "Galileo Galilei", "Niels Bohr"],
+      "answer": 1
+    },
+    {
+      "question": "Which Shakespeare play features the characters Rosencrantz and Guildenstern?",
+      "options": ["Macbeth", "Othello", "Hamlet", "King Lear"],
+      "answer": 2
+    },
+    {
+      "question": "What is the square root of 144?",
+      "options": ["11", "12", "13", "14"],
+      "answer": 1
+    },
+    {
+      "question": "Which ocean is the largest on Earth?",
+      "options": ["Atlantic Ocean", "Indian Ocean", "Arctic Ocean", "Pacific Ocean"],
+      "answer": 3
+    },
+    {
+      "question": "What is the name of the process by which plants make their food using sunlight?",
+      "options": ["Respiration", "Photosynthesis", "Fermentation", "Transpiration"],
+      "answer": 1
+    }
+  ]
+}
