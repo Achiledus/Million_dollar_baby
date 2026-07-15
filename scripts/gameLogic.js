@@ -70,11 +70,11 @@ let phoneFriendUsed     = false;
 let askAudienceUsed     = false;
 
 homeButton.addEventListener('click', ()=>{
-    window.location.href = "home.html";
+    window.location.href = "index.html";
 });
 
 giveUp.addEventListener('click', ()=>{
-    window.location.href = "home.html";
+    window.location.href = "index.html";
 });
 
 tryAgain.addEventListener('click', ()=>{
